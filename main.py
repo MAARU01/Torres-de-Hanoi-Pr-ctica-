@@ -1,4 +1,5 @@
-from hanoi import *
+import hanoi
+
 def menu () -> int:
     bienvenida  = """
     Bievenido a Torres de Hanoi,
@@ -15,4 +16,4 @@ def menu () -> int:
 
 if __name__ == "__main__":
     tipo = menu ()
-    hanoi_Juego(tipo)
+    hanoi.hanoi_Juego(tipo)
