@@ -1,7 +1,7 @@
 import sys 
 from pila import pila
 
-def movimiento_Discos (origen, destino, torre_origen, torre_destino):
+def movimiento_Discos (origen : pila, destino: pila, torre_origen : str, torre_destino : str):
     TopDiscoTorre1 = pila.Pop(origen)
     TopDiscoTorre2 = pila.Pop(destino)
 
@@ -23,7 +23,7 @@ def movimiento_Discos (origen, destino, torre_origen, torre_destino):
         pila.push(destino, TopDiscoTorre1)
         print ("Se mueve el disco", TopDiscoTorre1 , "de la torre",torre_origen, "a la torre", torre_destino)
 
-def hanoi_Iteractivo (discos, torre1, torre2, torre3 , pila1, pila2, pila3):
+def hanoi_Iteractivo (discos : int , torre1 : str, torre2 : str, torre3 : str, pila1 : pila, pila2: pila, pila3: pila):
     if (discos % 2 == 0):
         temp = torre3
         torre3 = torre2 
