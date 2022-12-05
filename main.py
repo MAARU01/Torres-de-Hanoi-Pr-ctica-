@@ -1,4 +1,23 @@
-import hanoi
+from hanoiRecursive import hanoi_Recursivo
+from hanoiIteractive import hanoi_Iteractivo 
+from pila import pila
+import time
+
+def hanoi_Juego (optMetodo: int) -> str: 
+    num=int (input("Ingrese el número de discos: "))
+    inicio = time.time()
+    if optMetodo == 1:
+        origen = pila(num)
+        destino =pila (num)
+        auxiliar = pila (num)
+        time.sleep(1)
+        hanoi_Iteractivo(num,'A','B','C',origen,auxiliar,destino)
+    if optMetodo == 2:
+        time.sleep(1)
+        hanoi_Recursivo(num,'A','B','C')
+    print ("El tiempo de ejecución fue de: ", time.time() - inicio)
+    #if optMetodo == 3:
+        #hanoi_Mixto(num)
 
 def menu () -> int:
     bienvenida  = """
@@ -16,4 +35,4 @@ def menu () -> int:
 
 if __name__ == "__main__":
     tipo = menu ()
-    hanoi.hanoi_Juego(tipo)
+    hanoi_Juego(tipo)
