@@ -1,2 +1,2 @@
-# Torres de Hanoi Práctica-
-Programas de las torres de Hanoi utilizando método iteractivo, recursivo y mixto
+# Practice Hanoi Towers-
+Hanoi Scripts using iteractive, recursive and mix methodology 
